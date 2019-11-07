@@ -1,0 +1,10 @@
+VAR := value
+
+# This Makefile has a behavior which is hard to understand.
+# You will see `VAR is empty` if you execute `make`
+# but you will see `VAR is value` not `VAR is outside` if you execute `VAR=outside make`
+
+
+.PHONY: case1
+case1:
+	@go run penv.go
